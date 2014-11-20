@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="google_the_crop/Google.cs">
+    <Files>
+      <File FileName="google_the_crop/QuickCrop.cs" Line="90" Column="7" />
+      <File FileName="google_the_crop/QuickSaver.cs" Line="40" Column="32" />
+      <File FileName="google_the_crop/Imgur.cs" Line="15" Column="48" />
+      <File FileName="google_the_crop/Google.cs" Line="12" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
