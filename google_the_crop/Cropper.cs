@@ -15,11 +15,11 @@ namespace GoogleTheCrop
 
             PintaCore.Actions.Edit.Deselect.Activate ();
 
-            using (var src = doc.GetFlattenedImage()) {
-                using (var dest = new ImageSurface(Format.Argb32, rect.Width, rect.Height)) {
-                    using (var g = new Context(dest)) {
-                        g.SetSourceSurface (src, -rect.X, -rect.Y);
-                        g.Paint ();
+            using (var src = doc.GetFlattenedImage ()) {
+                using (var dest = new ImageSurface (Format.Argb32, rect.Width, rect.Height)) {
+                    using (var ctx = new Context (dest)) {
+                        ctx.SetSourceSurface (src, -rect.X, -rect.Y);
+                        ctx.Paint ();
                     }
 
                     // Save

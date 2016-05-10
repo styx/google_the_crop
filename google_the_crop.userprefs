@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="google_the_crop/Google.cs">
     <Files>
-      <File FileName="google_the_crop/QuickCrop.cs" Line="90" Column="7" />
-      <File FileName="google_the_crop/QuickSaver.cs" Line="40" Column="32" />
-      <File FileName="google_the_crop/Imgur.cs" Line="15" Column="48" />
-      <File FileName="google_the_crop/Google.cs" Line="12" Column="1" />
+      <File FileName="google_the_crop/QuickCrop.cs" Line="72" Column="17" />
+      <File FileName="google_the_crop/HtmlForm.cs" Line="41" Column="10" />
+      <File FileName="google_the_crop/Google.cs" Line="30" Column="1" />
+      <File FileName="google_the_crop/AssemblyInfo.cs" Line="3" Column="1" />
+      <File FileName="google_the_crop/Cropper.cs" Line="16" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

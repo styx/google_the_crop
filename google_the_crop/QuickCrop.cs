@@ -36,43 +36,44 @@ namespace GoogleTheCrop
     public class QuickCropExtension : IExtension
     {
         private readonly Widget _menuItem;
-        private const String Quality = "95";
 
         #region IExtension Members
-        public void Initialize()
+
+        public void Initialize ()
         {
-            PintaCore.Actions.Addins.AddMenuItem(_menuItem);
+            PintaCore.Actions.Addins.AddMenuItem (_menuItem);
         }
 
-        public void Uninitialize()
+        public void Uninitialize ()
         {
-            PintaCore.Actions.Addins.RemoveMenuItem(_menuItem);
+            PintaCore.Actions.Addins.RemoveMenuItem (_menuItem);
         }
+
         #endregion
 
         public QuickCropExtension ()
         {
-            var menuAction = new Action (
-                "google_the_crop",
-                "Google the crop",
-                "Googles for selected part of image",
-                "Menu.View.ZoomToSelection.png");
+            var menuAction =
+                new Action (
+                    "google_the_crop",
+                    "Google the crop",
+                    "Googles selected part of the image",
+                    "Menu.View.ZoomToSelection.png");
 
-            menuAction.Activated += (sender, e) => CropSaveGoogle();
+            menuAction.Activated += (sender, e) => CropSaveGoogle ();
             _menuItem = menuAction.
-                CreateAcceleratedMenuItem(Gdk.Key.Q, ModifierType.None);
+                CreateAcceleratedMenuItem (Gdk.Key.Q, ModifierType.None);
         }
 
         public void CropSaveGoogle ()
         {
-
             var pb = Cropper.Crop ();
             var filepath = ImgSaver.Save (pb);
             ((IDisposable)pb).Dispose ();
 
             if (filepath != null) {
-                var returnurl = Imgur.Upload (filepath);
-                Google.Now (returnurl);
+                var formPath = HtmlForm.Encode (filepath);
+                Google.Now (formPath);
             }
         }
     }

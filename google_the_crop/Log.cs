@@ -5,7 +5,7 @@ namespace GoogleTheCrop
 {
     public class Log
     {
-        private const String PATH = @"/media/TRASH/upload_log.txt";
+        private const String PATH = @"/tmp/upload_log.txt";
 
         public static void Line (string str)
         {
